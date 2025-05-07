@@ -12,19 +12,14 @@ class Rectangulo {
   }
 }
 
-const rectangulos = new Rectangulo(6, 4);
-const rectangulos2 = new Rectangulo(5, 8);
-const rectangulos3 = new Rectangulo(12, 10);
-const rectangulos4 = new Rectangulo(20, 5);
+const rectangulos = [
+  new Rectangulo(6, 4),
+  new Rectangulo(5, 8),
+  new Rectangulo(12, 10),
+  new Rectangulo(20, 5),
+];
 
-document.writeln("<p>El perimetro es: " + rectangulos.perimetro() + "</p>");
-document.writeln("<p>El area es: " + rectangulos.area() + "</p>");
-
-document.writeln("<p>El perimetro es: " + rectangulos2.perimetro() + "</p>");
-document.writeln("<p>El area es: " + rectangulos2.area() + "</p>");
-
-document.writeln("<p>El perimetro es: " + rectangulos3.perimetro() + "</p>");
-document.writeln("<p>El area es: " + rectangulos3.area() + "</p>");
-
-document.writeln("<p>El perimetro es: " + rectangulos4.perimetro() + "</p>");
-document.writeln("<p>El area es: " + rectangulos4.area() + "</p>");
+for (let i = 0; i < rectangulos.length; i++) {
+  document.writeln("<p>El perimetro es: " + rectangulos[i].perimetro() + "</p>");
+  document.writeln("<p>El area es: " + rectangulos[i].area() + "</p>");
+}
